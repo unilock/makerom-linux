@@ -1,0 +1,5 @@
+bundle.tar.bz2:
+http://forum.netkas.org/index.php/topic,5619.0.html
+
+bundle2.zip:
+https://forums.macrumors.com/threads/flashing-r9-280x-for-boot-screens-pci-system-information.1808938/post-30767899

@@ -1,0 +1,36 @@
+tested on Pop!_OS 21.10 impish (Ubuntu)
+
+-- install required packages --
+$ sudo apt install build-essential gcc git iasl nasm uuid-dev python-is-python3 python3 python3-distutils python3-pip
+$ pip install edk2-pytool-extensions
+^ close the "kdewallet" window
+^ will install locally! (~/.local)
+
+-- create src folder --
+$ mkdir ~/src; cd ~/src
+
+-- git clone edk2 --
+( check if https://github.com/tianocore/edk2/pull/2231 is merged )
+
+-- IF MERGED --
+$ git clone -b brotli https://github.com/rossburton/edk2; cd edk2
+
+-- IF NOT MERGED --
+$ git clone https://github.com/tianocore/edk2; cd edk2
+
+-- continue normally from here --
+
+-- setup build environment --
+$ git submodule update --init
+$ make -C BaseTools
+$ . edksetup.sh
+
+-- build BaseTools --
+$ python BaseTools/Edk2ToolsBuild.py -t GCC5
+
+
+
+EfiCompress.macosx can be substituted for the following:
+```
+/path/to/TianoCompress -d --uefi -o <outfile> <infile>
+```
