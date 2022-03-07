@@ -10,15 +10,8 @@ $ pip install edk2-pytool-extensions
 $ mkdir ~/src; cd ~/src
 
 -- git clone edk2 --
-( check if https://github.com/tianocore/edk2/pull/2231 is merged )
-
--- IF MERGED --
-$ git clone -b brotli https://github.com/rossburton/edk2; cd edk2
-
--- IF NOT MERGED --
+( brotli issue fixed with https://github.com/tianocore/edk2/pull/2514 )
 $ git clone https://github.com/tianocore/edk2; cd edk2
-
--- continue normally from here --
 
 -- setup build environment --
 $ git submodule update --init
