@@ -11,7 +11,7 @@ GPUs: Radeon HD 7950
              HD 7970
              R9 280X
 
-LINUX amd64: Any distribution should work, as long as you know what you're doing.
+LINUX amd64: Any distribution should work, as long as you know what you're doing, and so long as its using GLIBC later than 2.33.
              (I probably should've compiled TianoCore for i386...)
 
 OTHER OS / ARCH: You'll need to recompile TianoCompress. See ./Docs/TianoCompress.txt.
